@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(10, 83, 34);
+    text-align: center;
+    margin: 10px auto;
+}
+
+img{
+    height: 250px;
+    width: 250px;
+    border: 10px solid black;
+    border-radius: 125px;
+}
+.sprite{
+    background-color: white;
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
+    float: left;
+}
+
+small{
+    font-size: 25px;
+}
+
+#pokemonNames{
+    color: white;
+}
+
+#pokeNames{
+    color: orange;
+}

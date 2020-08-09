@@ -1,0 +1,12 @@
+<h2><%= pokedata.name %> <small># <%= pokedata.order %></small></h2>
+<div class="sprite">
+    <img src="<%= pokedata.sprites.front_default %>" alt="Pokemon sprite"/>
+</div>
+<div>
+  <h3>Types:</h3>
+
+  <% pokedata.types.forEach((t)=>{ %>
+  <h4 class="<%= t.type.name %>"><%= t.type.name %></h4>
+  <% }); %>
+
+</div>
