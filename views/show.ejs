@@ -3,10 +3,19 @@
     <img src="<%= pokedata.sprites.front_default %>" alt="Pokemon sprite"/>
 </div>
 <div>
-  <h3>Types:</h3>
+  <h3>Type:</h3>
 
   <% pokedata.types.forEach((t)=>{ %>
-  <h4 class="<%= t.type.name %>"><%= t.type.name %></h4>
+  <h4 class="<%= t.type.name %>" id='pokeType'><%= t.type.name %></h4>
   <% }); %>
+
+
+  <h3 id="movestitle">moves:</h3>
+  <div class="moves">
+    <% pokedata.moves.slice(0,15).forEach((a)=> { %>
+      <div id='moves'><%= a.move.name %></div>
+    <% }) %> 
+  </div>
+
 
 </div>

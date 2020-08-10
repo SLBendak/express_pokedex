@@ -4,6 +4,7 @@ var db = require('../models');
 const axios = require('axios');
 const { request } = require('express');
 
+
 // GET /pokemon - return a page with favorited Pokemon
 router.get('/', async (req, res) => {
   // TODO: Get all records from the DB and render to view
@@ -27,7 +28,7 @@ router.post('/', async (req, res) => {
     res.redirect("/pokemon");
     
   } catch (error) {
-      res.render("Error:", error);
+      res.render("Not Found", error);
     
   }
   
@@ -43,7 +44,7 @@ router.get("/:name", async (req, res) => {
       res.render('show', { pokedata: pokemonData})
     }
   } catch (error) {
-    res.render("Error:", error);
+    res.render("Not Found", error);
   }
   // if (req.params && req.params.name) {
   //   request(
@@ -60,6 +61,22 @@ router.get("/:name", async (req, res) => {
   // } else {
   //   res.render("error")
   // }
+});
+
+router.delete('/', async (req, res) => {
+  try {
+    await db.pokemon.destroy({
+      where: {
+        name: req.body.name,
+      },
+    })
+    res.redirect("/pokemon");
+    
+  } catch (error) {
+      res.send('Error');
+    
+  }
+  
 });
 
 

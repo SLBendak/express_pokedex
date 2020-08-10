@@ -1,6 +1,6 @@
 <h2>Favorites</h2>
 
-<p><%= pokemon.length %> favorites!</p>
+<p><%= pokemon.length %> favorite Pokemon</p>
 
 <% pokemon.forEach((p)=>{ %>
 <div class="well">
@@ -8,6 +8,10 @@
     <a href="/pokemon/<%= p.name %>">
       <span id='pokemonNames'><%= p.name %></span>
     </a>
+    <form method="POST" action="/pokemon?_method=DELETE">
+      <input hidden type="text" name="name" value="<%= p.name %>">
+      <button class="btn btn-primary" type="submit">Remove Pokemon</button>
+    </form>
   </h3>
 </div>
 <% }); %>
