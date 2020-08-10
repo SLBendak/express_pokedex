@@ -1,22 +1,23 @@
+<div class="trees"></div>
 <h2><%= pokedata.name %> <small># <%= pokedata.order %></small></h2>
-<div class="sprite">
-    <img src="<%= pokedata.sprites.front_default %>" alt="Pokemon sprite"/>
-</div>
-<div>
-  <h3>Type:</h3>
-
-  <% pokedata.types.forEach((t)=>{ %>
-  <h4 class="<%= t.type.name %>" id='pokeType'><%= t.type.name %></h4>
-  <% }); %>
-
-
-  <h3 id="movestitle">moves:</h3>
-  <div class="moves">
-    <% pokedata.moves.slice(0,15).forEach((a)=> { %>
-      <div id='moves'><%= a.move.name %></div>
-    <% }) %> 
+  <div class="sprite">
+      <img src="<%= pokedata.sprites.front_default %>" alt="Pokemon sprite"/>
   </div>
+  <div>
+    <h3>Type:</h3>
 
-  <% console.log(pokedata.evolution_chain); %>
+    <% pokedata.types.forEach((t)=>{ %>
+    <h4 class="<%= t.type.name %>" id='pokeType'><%= t.type.name %></h4>
+    <% }); %>
 
-</div>
+
+    <h3 id="movestitle">moves:</h3>
+    <div class="moves">
+      <% pokedata.moves.slice(0,15).forEach((a)=> { %>
+        <div id='moves'><%= a.move.name %></div>
+      <% }) %> 
+    </div>
+
+    
+
+  </div>

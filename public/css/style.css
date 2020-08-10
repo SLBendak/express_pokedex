@@ -1,10 +1,22 @@
 body{
+    /* background-image: url('/img/treeBg.png'); */
     background-color: teal;
+    background-repeat: no-repeat;
+    background-size: contain;
     text-align: center;
+
     margin: 0 auto;
     color: blue;
     text-shadow: 2px 2px 5px black;
 }
+/* .trees {
+    background-image: url('/img/treeBg.png');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    
+} */
 
 .nav-wrapper{
     background-color: red;
