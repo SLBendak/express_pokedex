@@ -1,5 +1,5 @@
 body{
-    background-color: white;
+    background-color: teal;
     text-align: center;
     margin: 0 auto;
     color: blue;
@@ -32,11 +32,12 @@ small{
 }
 
 #pokemonNames{
-    color: lightgreen;
+    color: white;
 }
 
 #pokeType{
     font-size: 30px;
+    margin-left: 10%;
 }
 
 .moves {
@@ -51,8 +52,27 @@ small{
     flex: 1 1 160px;
 }
 
+.section {
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: 33%; */
+    font-size: 20px;
+    background-color: goldenrod;
+}
+.section>* {
+    flex: 1 1 160px;
+}
+
+.well{
+    margin: 10px 20px;
+}
+
 movestitle{
     float: clear;
+}
+#totalPoke{
+    color: white;
 }
 .bug{
     color: #A8B820;
